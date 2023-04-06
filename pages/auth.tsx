@@ -1,6 +1,6 @@
 import axios from 'axios';
-import Input from '@components/components/Input'
-import React, { useCallback, useState } from 'react'
+import Input from '@components/components/Input';
+import { useCallback, useState } from 'react';
 import { signIn } from 'next-auth/react';
 
 import { FcGoogle } from 'react-icons/fc';
@@ -15,7 +15,7 @@ const Auth = () => {
 
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => currentVariant === 'login' ? 'register' : 'login');
-    }, [])
+    }, []);
 
     const login = useCallback(async () => {
         try {
